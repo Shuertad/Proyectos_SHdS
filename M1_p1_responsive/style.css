@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+
+:root {
+  --white: #ffffff;
+  --primary: #f1efe7;
+  --secondary: #cdc3a6;
+  --terciary: #cdb46f;
+}
+
+/* reset de estilos */
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  font-family: "Exo Soft Light", Adobe;
+}
+
+body {
+  background-color: var(--primary);
+  padding: 20px;
+}
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.logo {
+  width: 20%;
+  min-width: 90px;
+}
+
+#buscador {
+  width: 60%;
+  min-width: 320px;
+  background-color: var(--white);
+  height: 30px;
+  border-radius: 20px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#buscador input {
+  width: 90%;
+  outline: none;
+  background-color: transparent;
+  padding-left: 15px;
+  
+}
+
+.lupa {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  justify-content: space-between;
+  width: 10%;
+}
+
+.icon {
+  width: 20px;
+  cursor: pointer;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: var(--secondary);
+  padding: 10px 0px 10px 0px;
+  flex-wrap: wrap;
+  border-radius: 2px;
+  margin: 20px 0px 20px 0px;
+  font-weight: bolder;
+}
+
+a {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+a:hover {
+  border-bottom: var(--primary) solid 2px;
+}
+
+.enlaces {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  flex-direction: column;
+  height: 200px;
+}
+
+.enlaces a {
+  font-weight: lighter;
+  transition: all, 1s;
+}
+
+.enlaces a:hover {
+  border: none;
+  color: var(--secondary);
+  transition: all, 1s;
+}
+
+.enlace-titulo {
+  color: white;
+  font-weight: bolder;
+}
