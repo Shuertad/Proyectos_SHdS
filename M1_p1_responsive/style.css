@@ -1,4 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
+@font-face {
+  font-family: "ExoFontLight";
+  src: url(./assets/fonts/static/Exo-Light.ttf);
+  font-weight: normal;
+  font-size: normal;
+}
 
 :root {
   --white: #ffffff;
@@ -14,7 +19,7 @@
   text-decoration: none;
   list-style: none;
   border: none;
-  font-family: "Exo Soft Light", Adobe;
+  font-family: "ExoFontLight";
 }
 
 body {
@@ -98,6 +103,20 @@ a:hover {
   align-items: flex-start;
   flex-direction: column;
   height: 200px;
+}
+
+footer {
+  background-color: var(--secondary);
+  position: absolute;
+  left: 0px;
+  width: 500%;
+  height: 30%;
+  margin-top: 400px;
+  gap: 50px;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 .enlaces a {
