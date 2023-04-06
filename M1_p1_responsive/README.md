@@ -1,24 +1,25 @@
 # Módulo 1: JavaScript (HTML & CSS)
-# Proyecto 1: Página web Responsive
+## Proyecto 1: Página web Responsive
 Autor (Github): shuertad
 
-Este proyecto consiste en una landing page maquetada y reponsive para una tienda online.
+### **Objetivo**:
+Crear una landing page maquetada y reponsive para una tienda online.
 
 
-Citerios de aceptación HTML:
+> ### Citerios de aceptación **HTML**:
+> 
+>> -- [ ]  Has creado una estructura HTML semántica donde priman los `section` y `article` frente a los `div` siempre y cuando sea correcto su uso. Estará el contenido envuelto en un `main`.
+> 
+>> -- [ ]  La web cuenta con al menos un elemento `header` o un elemento `footer` para contenido de navegación o adicional.
+> 
+>> -- [ ]  Hay al menos un elemento de tipo `ul` o de tipo `ol` con varios productos enumerados.
+> 
+>> -- [ ]  La web tendrá imágenes para al menos 10 productos, puedes copiar su URL de la web original haciendo `click derecho > abrir imagen en nueva pestaña > copia la URL de la imagen` o con el inspector del navegador.
+> 
+>> -- [ ]  La web contendrá links `a` que apunten a los productos originales, recuerda usar `rel="noopener"` para añadir links a webs externas.
+> 
 
--- [ ]  Has creado una estructura HTML semántica donde priman los `section` y `article` frente a los `div` siempre y cuando sea correcto su uso. Estará el contenido envuelto en un `main`.
-
--- [ ]  La web cuenta con al menos un elemento `header` o un elemento `footer` para contenido de navegación o adicional.
-
--- [ ]  Hay al menos un elemento de tipo `ul` o de tipo `ol` con varios productos enumerados.
-
--- [ ]  La web tendrá imágenes para al menos 10 productos, puedes copiar su URL de la web original haciendo `click derecho > abrir imagen en nueva pestaña > copia la URL de la imagen` o con el inspector del navegador.
-
--- [ ]  La web contendrá links `a` que apunten a los productos originales, recuerda usar `rel="noopener"` para añadir links a webs externas.
-
-
-Citerios de aceptación CSS:
+### Citerios de aceptación **CSS**:
 
 -- [ ]  Se han aplicado estilos globales para añadir `box-sizing: border-box;` y eliminar el padding y margin del `body`.
 
