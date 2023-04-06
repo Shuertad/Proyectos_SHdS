@@ -1,11 +1,11 @@
 # Módulo 1: JavaScript (HTML & CSS)
 ## Proyecto 1: Página web Responsive
-Autor (Github): shuertad
-
+*Autor (Github): shuertad*
+<p>
 ### **Objetivo**:
 Crear una landing page maquetada y reponsive para una tienda online.
-
-
+</p>
+<p>
 > ### Citerios de aceptación **HTML**:
 
  - [ ]  Has creado una estructura HTML semántica donde priman los `section` y `article` frente a los `div` siempre y cuando sea correcto su uso. Estará el contenido envuelto en un `main`.
@@ -17,8 +17,8 @@ Crear una landing page maquetada y reponsive para una tienda online.
  - [ ]  La web tendrá imágenes para al menos 10 productos, puedes copiar su URL de la web original haciendo `click derecho > abrir imagen en nueva pestaña > copia la URL de la imagen` o con el inspector del navegador.
 
  - [ ]  La web contendrá links `a` que apunten a los productos originales, recuerda usar `rel="noopener"` para añadir links a webs externas.
-
-
+</p>
+<p>
 > ### Citerios de aceptación **CSS**:
  
  - [ ]  Se han aplicado estilos globales para añadir `box-sizing: border-box;` y eliminar el padding y margin del `body`.
@@ -34,3 +34,4 @@ Crear una landing page maquetada y reponsive para una tienda online.
  - [ ]  Se ha configurado el texto para definir estilos generales para los `h1, h2, h3, p, span`.
  
      - [ ]  Punto adicional si ha cargado fuentes de [Google Fonts](https://fonts.google.com/).
+</p>
