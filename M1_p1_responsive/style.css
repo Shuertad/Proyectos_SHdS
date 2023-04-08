@@ -56,7 +56,7 @@ body {
   outline: none;
   background-color: transparent;
   padding-left: 15px;
-  font-weight: bolder;
+  
 }
 
 .lupa {
@@ -73,7 +73,7 @@ body {
 }
 
 .icon {
-  width: 20px;
+  width: 25px;
   cursor: pointer;
 }
 
@@ -269,24 +269,57 @@ footer {
   height: 40%;
   margin-top: 400px;
   gap: 50px;
-  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.info{
   display: flex;
   justify-content: space-around;
+  width: 100%;
+}
+
+.marca {
+  position:relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  height: 100%;
+  justify-content: space-around;
+}
+
+.rrss{
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.marca a {
+  font-weight: lighter;
+  color: var(--primary);
 }
 
 .enlaces a {
   font-weight: lighter;
-  transition: all, 1s;
+  color: var(--primary);
 }
 
 .enlaces a:hover {
   border: none;
-  color: var(--secondary);
-  transition: all, 1s;
+  color: var(--primary);
+  border-bottom: var(--primary) solid 2px;
 }
 
-.enlace-titulo {
+.enlace-titulo, .derechos {
   color: white;
   font-weight: bolder;
+}
+
+.derechos {
+  color: white;
+  font-weight: lighter;
 }
