@@ -24,7 +24,7 @@
 
 body {
   background-color: var(--primary);
-  padding: 0px;
+  padding: 20px;
 }
 
 .encabezado {
@@ -85,11 +85,11 @@ body {
   padding: 10px 0px 10px 0px;
   flex-wrap: wrap;
   border-radius: 4px;
-  margin: 0px 15px 0px 15px;
+  margin: 10px 0px 0px 0px;
   font-weight: bolder;
 }
 
-a {
+.navbar a {
   color: var(--primary);
   font-weight: bold;
 }
@@ -141,6 +141,19 @@ a:hover {
   cursor: pointer;
 }
 
+.boton a {
+  color: var(--primary);
+  font-weight: bold;
+}
+
+hr {
+  
+  display: flex;
+  position: relative;
+  top: 50px;
+  border-top: 2px solid var(--secondary);
+}
+
 .enlaces {
   display: flex;
   justify-content: space-around;
@@ -149,12 +162,111 @@ a:hover {
   height: 200px;
 }
 
+.productos {
+  display: flex;
+  background-color: white;
+  width: 100%;
+  margin-top: 75px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 30px 0px 30px 0px;
+  gap: 30px;
+}
+
+.items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background-color: white;
+}
+
+.productos-title {
+  width: 258px;
+  align-items: center;
+  justify-content: center;
+}
+
+.producto {
+  border-radius: 2px;
+  background-color: var(--white);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 750px;
+  gap: 20px;
+  width: 350px;
+  padding: 20px;
+  position: relative;
+  cursor: pointer;
+  margin: 10px 10px 10px 10px;
+}
+
+.producto:hover {
+  outline: solid 2px var(--terciary);
+}
+
+.info-producto {
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+  transition: all, 1s;
+}
+
+.info-producto:hover {
+  color: var(--secondary);
+  transition: all, 1s;
+}
+
+.imagen-producto {
+  width: 100%;
+}
+
+.arrow {
+  width: 20px;
+}
+
+.like {
+  position: absolute;
+  right: 30px;
+  top: 30px;
+}
+
+.destacados {
+  color: var(--terciary);
+}
+
+.comprar {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.alquilar a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--terciary);
+  font-weight: bold;
+}
+
+.alquilar a:hover {
+border-bottom: var(--terciary) solid 2px;
+}
+
+.compra p {
+  font-weight: bolder;
+}
+
 footer {
   background-color: var(--secondary);
   position: absolute;
-  left: 0px;
   width: 100%;
-  height: 1000px;
+  left: 0px;
+  height: 40%;
   margin-top: 400px;
   gap: 50px;
   flex-wrap: wrap;
