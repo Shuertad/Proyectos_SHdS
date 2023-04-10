@@ -261,19 +261,97 @@ border-bottom: var(--terciary) solid 2px;
   font-weight: bolder;
 }
 
+.comofunciona{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-top: 60px;
+}
+
+.comofunciona-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 20px;
+  width: 80%;
+}
+
+.pasos {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.pasos > img {
+  width: 400px;
+  height: 300px;
+}
+
+.pasos-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+  width: 500px;
+}
+
+.pasos-info1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 40px;
+  width: 500px;
+}
+
+.leyenda {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.pasos-info-comprar, .leyenda-comprar {
+  background-color: var(--secondary);
+  color: white;
+  font-weight: bold;
+  padding: 15px;
+}
+
+.pasos-info-vender, .leyenda-vender {
+  color: var(--terciary);
+  font-weight: bold;
+  padding: 15px;
+}
+
+.calltoaction2 {
+  align-items: center;
+  font-size: 20px;
+  color: var(--secondary);
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-direction: column;
+  font-weight: bold;
+}
+
 footer {
   background-color: var(--secondary);
   position: absolute;
   width: 100%;
   left: 0px;
   height: 40%;
-  margin-top: 400px;
+  margin-top: 40px;
   gap: 50px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
 }
 
 .info{
