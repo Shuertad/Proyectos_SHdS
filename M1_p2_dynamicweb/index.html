@@ -14,23 +14,47 @@
   </head>
   <body>
     <header class="page_header">
-      <div class="logos">
-        <img src="./assets/record_logo_white.png" alt="logo" class="logo1" />
-        <img
-          src="./assets/GuutRecords_white.png"
-          alt="brand_name"
-          class="logo2"
-        />
+      <div class="header_info">
+        <div class="logos">
+          <img src="./assets/record_logo_white.png" alt="logo" class="logo1" />
+          <img
+            src="./assets/GuutRecords_white.png"
+            alt="brand_name"
+            class="logo2"
+          />
+        </div>
+        <div class="search_bar">
+          <input
+            type="text"
+            placeholder="Looking for fresh grailz! Get 'em while they're hot!"
+          />
+        </div>
       </div>
-      <div class="search_bar">
-        <input
-          type="text"
-          placeholder="Looking for fresh grailz! Get 'em while they're hot!"
-        />
-      </div>
-      <div class="icons">
-        <img src="./assets/user_icon.png" alt="profile" class="icon1" />
-        <img src="./assets/burgermenu_icon.png" alt="menu" class="icon2" />
+      <div class="header_menus">
+        <nav class="navbar_user">
+          <label class="navbar_toggle" for="checkToggle"
+            ><img src="./assets/user_icon.png" alt="profile" class="icon1"
+          /></label>
+          <a href="#"></a>
+          <input type="checkbox" id="checkToggle" />
+          <ul class="main_nav">
+            <li><a href="#" class="nav_links"></a>LOGIN</li>
+            <li><a href="#" class="nav_links"></a>SIGN OFF</li>
+          </ul>
+        </nav>
+        <nav class="navbar_page">
+          <label class="navbar_toggle" for="checkToggle"
+            ><img src="./assets/burgermenu_icon.png" alt="menu" class="icon2"
+          /></label>
+          <a href="#"></a>
+          <input type="checkbox" id="checkToggle" />
+          <ul class="main_nav">
+            <li><a href="#" class="nav_links"></a>NEW</li>
+            <li><a href="#" class="nav_links"></a>HOT GRAILZ</li>
+            <li><a href="#" class="nav_links"></a>GENRES</li>
+            <li><a href="#" class="nav_links"></a>ARTISTS</li>
+          </ul>
+        </nav>
       </div>
     </header>
     <main>
@@ -41,15 +65,15 @@
             src="./assets/vynil_image2.png"
             alt="vynil boxes"
           />
-          <div class="call_to_action">
-            <div class="title">
-              <h1>Search millions of records and share the music you like</h1>
-            </div>
+          <div class="title">
+            <h1>Search millions of records and share the music you like</h1>
+          </div>
+          <div class="search_button_container">
             <button class="search_button">
               <a href="#">
                 <img
                   class="arrow_to_products"
-                  src="./assets/interface-arrows-button-down.png"
+                  src="./assets/interface-arrows-button-down_white.png"
                   alt="large arrow"
                 />
               </a>
