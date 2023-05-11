@@ -8,6 +8,7 @@
   :root {
     --white: #ffffff;
     --primary: #000000;
+    --secondary: #ff4948;
   }
   
   /* reset de estilos */
@@ -40,7 +41,7 @@
     display: flex;
     justify-content: right;
     align-items: center;
-    gap: 2%;
+    
     background-color: var(--primary);
     position: fixed;
     right: 0px;
@@ -48,7 +49,7 @@
     width: 100%;
     min-height: 80px;
     z-index: 3;
-    padding-right: 4%;;
+    padding-right: 4%;
 }
 
 .logos {
@@ -56,7 +57,7 @@
     width: 20%;
     flex-direction: column;
     justify-content: center;
-  align-items: center;
+    align-items: center;
 }
 
   .logo1 {
@@ -89,25 +90,33 @@
     background-color: transparent;
     padding-left: 5px;
     color: var(--white);
-    font-size: 15px;
+    font-size: 18px;
   }
   
   ::placeholder {
     color: var(--white);
     opacity: 1;
+    font-size: 18px;
   }
 
   .navbar_page, .navbar_user {
-    font-size: 1em;
-    background-color: var(--primary);
+    font-size: 1.2em;
+    background-color: var(--primary);;
   }
 
   #checkToggle {
     display: none;
+
   }
   
   #checkToggle:checked +ul.main_nav {
     display: block;
+    position: absolute;
+    
+    right:0;
+    width: 100%;
+    background-color: var(--primary);
+    
   }
 
   .main_nav {
@@ -120,9 +129,16 @@
     color: var(--white);
   }
 
+  .main_nav li:hover {
+    color: var(--secondary);
+    transition: color 0.5s;
+    cursor: pointer;
+  }
+
   .main_nav li {
-    text-align: center;
+    text-align: right;
     margin: 15px auto;
+    padding-right: 3.8%;
     color: var(--white);
   }
 
@@ -138,14 +154,17 @@
 
   .cover {
     width: 100%;
-    position: relative;
-    margin: auto;
+    position: absolute;
     top: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
   }
 
 .cover_image {
     
-    z-index: 1;
+    z-index: 0;
     width: 100%;
     height: 300px;
     object-fit: cover;
@@ -157,28 +176,36 @@
     left: 5%;
     text-transform: uppercase;
     font-size: 30px;
+    z-index: 2;
 }
 
 .search_button_container {
     position: absolute;
     bottom: 10%;
-    left: 45%;
+    width:100%;
     z-index: 2;
 }
 
 .search_button {
     background-color: transparent;
-    padding: 1px 60px 1px 60px;
     border-radius: 80px;
     cursor: pointer;
+    margin: 0 40% 0 40%;
   }
 
 .arrow_to_products:hover {
     transform: scale(1.1);
   }
 
+  .products {
+    width: 100%;
+    color: var(--secondary);
+    position:fixed;
+    top: 600px;
+  }
+
 .footer {
-    position: absolute;
+    position:absolute;
     display: flex;
     bottom: 0;
     justify-content: space-between;
