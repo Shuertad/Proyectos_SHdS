@@ -32,8 +32,8 @@
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary);
-    width: 80%;
-    min-height: 80px;
+    width: 90%;
+    min-height: 85px;
     z-index: 4;
   }
 
@@ -47,7 +47,7 @@
     right: 0px;
     top: 0px;
     width: 100%;
-    min-height: 80px;
+    min-height: 85px;
     z-index: 3;
     padding-right: 4%;
 }
@@ -119,6 +119,12 @@
     
   }
 
+  #checkToggle:checked +div.search_button_container {
+    display: none;
+    
+  }
+
+
   .main_nav {
     list-style-type: none;
     display: none;
@@ -182,7 +188,9 @@
 .search_button_container {
     position: absolute;
     bottom: 10%;
-    width:100%;
+    left: 50%;
+    top: 80%;
+    transform: translate(-50%,-50%);
     z-index: 2;
 }
 
@@ -190,6 +198,7 @@
     background-color: transparent;
     border-radius: 80px;
     cursor: pointer;
+    align-items: center;
     margin: 0 40% 0 40%;
   }
 
