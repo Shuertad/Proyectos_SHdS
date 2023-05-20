@@ -1,6 +1,6 @@
 # Modulus 1: JavaScript (HTML & CSS)
 
-## Project 2: Dynamic Web Page
+## Project 2: Dynamic Web Page - WIP
 
 Author (Github): _shuertad_
 
