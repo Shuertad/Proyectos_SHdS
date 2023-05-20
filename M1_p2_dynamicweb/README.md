@@ -4,6 +4,8 @@
 
 Author (Github): _shuertad_
 
-### **Objetivo:**
+### **Objetive:**
 
 Create a dynamic and responsive web page with basic JavaScript functionalities
+
+Web page theme: Online vynil store (Guut Records)
