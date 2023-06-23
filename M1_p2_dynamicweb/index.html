@@ -47,32 +47,31 @@
       </nav>
     </header>
     <main>
-      <article>
-        <section class="cover">
-          <img
-            class="cover_image"
-            src="./assets/vynil_image2.png"
-            alt="vynil boxes"
-          />
-          <div class="title">
-            <h1>Search millions of records and share the music you like</h1>
-          </div>
-          <div class="search_button_container" title="Let's go!">
-            <button class="search_button">
-              <a rel="noopener" href="#product_list">
-                <img
-                  class="arrow_to_products"
-                  src="./assets/interface-arrows-button-down_white.png"
-                  alt="large arrow"
-                />
-              </a>
-            </button>
-          </div>
-        </section>
-      </article>
-      <article>
-        <p id="product_list" class="products">Hello</p>
-      </article>
+      <section class="cover">
+        <img
+          class="cover_image"
+          src="./assets/vynil_image2.png"
+          alt="vynil boxes"
+        />
+        <div class="title">
+          <h1>Search millions of records and share the music you like</h1>
+        </div>
+        <div class="search_button_container" title="Let's go!">
+          <button class="search_button">
+            <a rel="noopener" href="#product-section">
+              <img
+                class="arrow_to_products"
+                src="./assets/interface-arrows-button-down_white.png"
+                alt="large arrow"
+              />
+            </a>
+          </button>
+        </div>
+      </section>
+      <section class="product-view" id="product-section">
+        <div class="filters-container"></div>
+        <div class="products-container"></div>
+      </section>
     </main>
     <footer class="footer">
       <div class="footer_info">
@@ -119,5 +118,6 @@
         </div>
       </div>
     </footer>
+    <script src="./main.js"></script>
   </body>
 </html>
