@@ -72,3 +72,23 @@ const products = [
     // Añade aquí al menos 9 productos más para tener un total de 10 productos
     // puedes cambiar los campos de cada objeto si es necesario para tu diseño...
   ];
+
+// filter section
+const filterSectionContainer = document.querySelector('.filters-container');
+
+const filterSection = () => `
+<p class="filter-title-section">WHAT ARE YOU LOOKING FOR?</p><br>
+<input id="filter1-input" type="text" placeholder="Artist"><br>
+<input id="filter2-input" type="number" placeholder="Price"><br>
+<div class="filter-buttons-container">
+<input id="search-button" type="submit" value="Search">
+<input id="reset-button" type="reset" value="Reset">
+</div>
+`
+
+const filterSectionSet = () => {
+    const template = filterSection();
+    filterSectionContainer.innerHTML += template;
+};
+
+filterSectionSet();

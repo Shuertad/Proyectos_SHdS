@@ -98,7 +98,7 @@
     font-size: 18px;
   }
   
-  ::placeholder {
+  .search_bar>input::placeholder {
     color: var(--white);
     opacity: 1;
     font-size: 18px;
@@ -218,26 +218,83 @@ main {
 .product-view {
   position: static;
   top: 100px;
-  background-color: red;
-  overflow: hidden;
+  /*overflow: hidden;*/
   display: flex;
   flex-direction: row;
-  padding-top: 80px;
   background-color: var(--primary);
+  padding: 0 5% 0 5%;
 }
 
 .filters-container {
   position: sticky;
-  background-color: green;
+  background-color: var(--primary);
+  top: 0px;
   height: 200px;
-  top: 80px;
   width: 20vw;
+  min-width: 200px;
+  padding-top: 100px;
+  z-index: 2;
+}
+
+.filter-title-section {
+  color: var(--white);
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#filter1-input, #filter2-input {
+  border-bottom: var(--white) solid 2px;
+  background-color: var(--primary);
+  font-size: 15px;
+  color: var(--white);
+  width: 100%;
+}
+
+#filter1-input:focus, #filter2-input:focus {
+  border-bottom: var(--secondary) solid 2px;
+  outline: none;
+}
+
+#filter1-input::placeholder, #filter2-input::placeholder {
+  font-style: italic;
+  color: var(--white);
+  opacity: 1;
+  font-size: 15px;
+}
+
+.filter-buttons-container {
+  justify-content: center;
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+}
+
+#search-button, #reset-button {
+  background-color: var(--primary);
+  border: var(--white) solid 2px;
+  color: var(--white);
+  border-radius: 20px;
+  padding: 0% 5% 0% 5%;
+  font-size: 15px;
+}
+
+#search-button:hover, #reset-button:hover {
+  border: var(--secondary) solid 2px;
+  color: var(--secondary);
+}
+
+#search-button:active, #reset-button:active {
+  border: var(--secondary) solid 2px;
+  color: var(--secondary);
+  transform: scale(1.1);
+
 }
 
 .products-container {
-  position: static;
+  position: relative;
   background-color: yellowgreen;
-  height: 100%;
+  top: 80px;
+  height: 800px;
   width: 80vw;
 }
 
@@ -362,5 +419,20 @@ main {
 
     .search_button_container {
       top: 50vh;
+    }
+
+    .product-view {
+      flex-direction: column;
+    }
+
+    .filters-container {
+      width: 100%;
+      min-width: 200px;
+      height: 150px;
+    }
+
+    .products-container {
+      width: 100%;
+      top: 0px;
     }
   }
