@@ -87,8 +87,36 @@ const filterSection = () => `
 `
 
 const filterSectionSet = () => {
-    const template = filterSection();
-    filterSectionContainer.innerHTML += template;
+    const filterTemplate = filterSection();
+    filterSectionContainer.innerHTML += filterTemplate;
 };
 
 filterSectionSet();
+
+// product section
+const productSectionContainer = document.querySelector('.products-container');
+
+const productSection = (index,imgUrl,name,artist,price) => `
+<article class="product-container" id="${index}">
+<img src="${imgUrl}" alt="${name}" class="product-image" />
+<div class="product-info-container">
+<p class="product-name">${name}</p><br>
+<p class="product-artist">${artist}</p><br>
+<p class="product-price">${price}</p>
+</div>
+<input id="buy-button" type="submit" value="Buy">
+</article>
+`
+
+for (let i = 0; i < products.length; i++) {
+    const productTemplate = productSection(i,products[i].image,products[i].name,products[i].artist,products[i].price);
+    productSectionContainer.innerHTML += productTemplate;
+}
+/*
+const productSectionSet = (product,index) => {
+    const productTemplate = productSection(index,product.image,product.name,product.artist,product.price);
+    productSectionContainer.innerHTML += productTemplate;
+};
+
+products.forEach(productSectionSet(product,index));
+*/
