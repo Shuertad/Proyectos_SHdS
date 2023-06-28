@@ -4,6 +4,8 @@ const products = [
       price: 34,
       artist: 'Herbie Hancock',
       description: 'MUSIC ON VINYL EDITION.',
+      genre: 'Jazz',
+      date: '1969',
       image: 'https://www.jazzymas.com/25276-large_default/hancock-herbie-fat-albert-rotunda-lp-180-gr.jpg'
     },
     {
@@ -11,6 +13,8 @@ const products = [
         price: 31,
         artist: 'Billy Cobham',
         description: 'ATLANTIC 75TH ANNIVERSARY CLEAR VINYL',
+        genre: 'Jazz Fusion',
+        date: '1973',
         image: 'https://www.jazzymas.com/24069-large_default/cobha…-180-gr-atlantic-75th-anniversary-clear-vinyl.jpg'
     },
     {
@@ -18,6 +22,8 @@ const products = [
         price: 20,
         artist: 'Herbie Hancock',
         description: 'BOX-SET 5 CDS NEW',
+        genre: 'Jazz',
+        date: '1970',
         image: 'https://www.jazzymas.com/23300-large_default/hancock-herbie-5-original-albums-5-cds-boxed-set.jpg'
     },
     {
@@ -25,6 +31,8 @@ const products = [
         price: 36,
         artist: 'Wes Montgomery',
         description: 'RIVERSIDE CLEAR VYNIL',
+        genre: 'Jazz',
+        date: '1960',
         image: 'https://www.jazzymas.com/26470-large_default/montg…ible-jazz-guitar-of-wes-montgomery-lp-180-gr-.jpg'
     },
     {
@@ -32,6 +40,8 @@ const products = [
         price: 25.5,
         artist: 'Wes Montgomery',
         description: 'VERVE STEREO LP',
+        genre: 'Jazz',
+        date: '1965',
         image: 'https://www.jazzymas.com/25950-large_default/montgomery-wes-bumpin-lp-180-gr-edicion-limitada.jpg'
     },
     {
@@ -39,6 +49,8 @@ const products = [
         price: 44,
         artist: 'Art Blakey',
         description: 'BLUE NOTE CLASSIC SERIES',
+        genre: 'Jazz',
+        date: '1961',
         image: 'https://www.jazzymas.com/23487-large_default/blake…ers-moanin-lp-180-gr-blue-note-classic-series.jpg'
       },
       {
@@ -46,6 +58,8 @@ const products = [
           price: 29.5,
           artist: 'Charles Bradley',
           description: 'ATLANTIC 75TH ANNIVERSARY CLEAR VINYL',
+          genre: 'Soul',
+          date: '2016',
           image: 'https://www.jazzymas.com/24047-large_default/bradley-charles-changes-lp-180-gr.jpg'
       },
       {
@@ -53,6 +67,8 @@ const products = [
           price: 16,
           artist: 'Miles Davis',
           description: 'DOUBLE CD',
+          genre: 'Jazz Fusion',
+          date: '1979',
           image: 'https://www.jazzymas.com/4027-large_default/davis-miles-circle-in-the-round-2-cds-set-mocd.jpg'
       },
       {
@@ -60,6 +76,8 @@ const products = [
           price: 29.5,
           artist: 'Miles Davis',
           description: 'DOUBLE VYNIL - DELUXE EDITION WITH LIVE AT NICE JAZZ FESTIVAL, 1986',
+          genre: 'Jazz',
+          date: '1986',
           image: 'https://www.jazzymas.com/20828-large_default/davis-miles-tutu-digipak-edition.jpg'
       },
       {
@@ -67,6 +85,8 @@ const products = [
           price: 26,
           artist: 'Miles Davis',
           description: 'TURQOISE VYNIL EDITION',
+          genre: 'Jazz Fusion',
+          date: '1971',
           image: 'https://www.jazzymas.com/21882-large_default/davis…live-evil-2-lps-180-gr-vinilos-color-turquesa.jpg'
       },
     // Añade aquí al menos 9 productos más para tener un total de 10 productos
@@ -78,12 +98,32 @@ const filterSectionContainer = document.querySelector('.filters-container');
 
 const filterSection = () => `
 <p class="filter-title-section">WHAT ARE YOU LOOKING FOR?</p><br>
+<form>
 <input id="filter1-input" type="text" placeholder="Artist"><br>
-<input id="filter2-input" type="number" placeholder="Price"><br>
+<label for="date-filter" id="filter2-input">Decade: </label>
+<select id="date-filter">
+    <option class="date-options" value=""></option>
+    <option class="date-options" value="1960">1960</option>
+    <option class="date-options" value="1970">1970</option>
+    <option class="date-options" value="1980">1980</option>
+    <option class="date-options" value="1990">1990</option>
+    <option class="date-options" value="2000">2000</option>
+    <option class="date-options" value="2010">2010</option>
+    <option class="date-options" value="2020">2020</option>
+</select><br>
+
+<input type="checkbox" class="filter-check_toggle" id="genre1" name="Jazz" value="Jazz">
+<label class="filter3-input" for="genre1"> Jazz</label><br>
+<input type="checkbox" class="filter-check_toggle" id="genre2" name="Soul" value="Soul">
+<label class="filter3-input" for="genre2"> Soul</label><br>
+<input type="checkbox" class="filter-check_toggle" id="genre3" name="Rock" value="Rock">
+<label class="filter3-input" for="genre3"> Rock</label>
+
 <div class="filter-buttons-container">
 <input id="search-button" type="submit" value="Search">
 <input id="reset-button" type="reset" value="Reset">
 </div>
+</form>
 `
 
 const filterSectionSet = () => {
@@ -96,29 +136,51 @@ filterSectionSet();
 // product section
 const productSectionContainer = document.querySelector('.products-container');
 
-const productSection = (index,imgUrl,name,artist,price) => `
+const productSection = (index,imgUrl,name,artist,date) => `
 <article class="product-container" id="${index}">
 <a rel="noopener" href="#">
 <img src="${imgUrl}" alt="${name}" class="product-image" />
 </a>
 <div class="product-info-container">
 <p class="product-name">${name}</p><br>
-<p class="product-artist">${artist}</p><br>
-<p class="product-price">${price}</p>
+<p class="product-date">${date}</p><br>
+<p class="product-artist">${artist}</p>
+
 </div>
-<input id="buy-button" type="submit" value="Buy">
+<input id="product-info-button" type="submit" value="Ask me!">
 </article>
 `
 
+// Add products to html
 for (let i = 0; i < products.length; i++) {
-    const productTemplate = productSection(i,products[i].image,products[i].name,products[i].artist,products[i].price);
+    const productTemplate = productSection(i,products[i].image,products[i].name,products[i].artist,products[i].date);
     productSectionContainer.innerHTML += productTemplate;
 }
-/*
-const productSectionSet = (product,index) => {
-    const productTemplate = productSection(index,product.image,product.name,product.artist,product.price);
-    productSectionContainer.innerHTML += productTemplate;
-};
 
-products.forEach(productSectionSet(product,index));
-*/
+//State filter variables
+let filterArtistField = document.querySelector('#filter1-input').value;
+let filterDateField = document.querySelector('#date-filter').value;
+//filterGenreField = document.querySelector('#dbtnToClick');
+
+
+//Filter action button
+filterSubmitField = document.querySelector('#search-button');
+
+//Submit filter function
+const applyFilters = () => {
+    filterArtistField = document.querySelector('#filter1-input').value;
+    filterDateField = document.querySelector('#date-filter').value;
+
+    if (filterArtistField !== null) {
+        //filter with artist
+    };
+    if (filterDateField !== null) {
+        //filter with date
+    };
+
+    //Erase original product list and paste filtered product array
+
+   };
+
+//Filter event listener
+filterSubmitField.addEventListener('click',applyFilters);

@@ -224,18 +224,21 @@ main {
   display: flex;
   flex-direction: row;
   background-color: var(--primary);
-  padding: 5% 5% 0 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 80px;
+  margin-top: -80px;
 }
 
 .filters-container {
   position: sticky;
   background-color: var(--primary);
-  top: 0px;
-  height: 200px;
+  top: 80px;
   width: 20vw;
   min-width: 200px;
-  padding-top: 80px;
+  padding-top: 20px;
   z-index: 2;
+  margin-bottom: 20px;
 }
 
 .filter-title-section {
@@ -244,15 +247,40 @@ main {
   font-size: 25px;
 }
 
-#filter1-input, #filter2-input {
+#filter1-input {
   border-bottom: var(--white) solid 2px;
+  background-color: var(--primary);
+  font-size: 15px;
+  color: var(--white);
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#filter2-input {
+  background-color: var(--primary);
+  font-size: 15px;
+  color: var(--white);
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+#date-filter {
+  border-bottom: var(--white) solid 2px;
+  background-color: var(--primary);
+  font-size: 15px;
+  color: var(--white);
+  margin-bottom: 10px;
+  place-content: center;
+}
+
+.filter3-input {
   background-color: var(--primary);
   font-size: 15px;
   color: var(--white);
   width: 100%;
 }
 
-#filter1-input:focus, #filter2-input:focus {
+#filter1-input:focus, #date-filter:focus {
   border-bottom: var(--secondary) solid 2px;
   outline: none;
 }
@@ -266,7 +294,7 @@ main {
 
 .filter-buttons-container {
   justify-content: center;
-  margin-top: 15px;
+  margin-top: 10px;
   display: flex;
   gap: 20px;
 }
@@ -296,7 +324,7 @@ main {
   position: relative;
   background-color: var(--primary );
   overflow: hidden;
-  top: 80px;
+  top: 20px;
   margin-bottom: 150px;
   width: 80vw;
   display: flex;
@@ -344,8 +372,9 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: flex-start;
   margin-bottom: 10px;
+  width: 100%;
 }
 
 .product-image {
@@ -356,7 +385,7 @@ main {
   margin-bottom: 10px;
 }
 
-#buy-button {
+#product-info-button {
   background-color: var(--primary);
   border: var(--white) solid 2px;
   color: var(--white);
@@ -364,15 +393,15 @@ main {
   padding: 0% 5% 0% 5%;
   font-size: 15px;
   font-weight: bold;
-  width: 80px
+  width: 120px
 }
 
-#buy-button:hover {
+#product-info-button:hover {
   border: var(--secondary) solid 2px;
   color: var(--secondary);
 }
 
-#buy-button:active {
+#product-info-button:active {
   transform: scale(1.1);
   border: var(--secondary) solid 2px;
   color: var(--secondary);
@@ -512,7 +541,6 @@ main {
     .filters-container {
       width: 100%;
       min-width: 200px;
-      height: 210px;
     }
 
     .products-container {
