@@ -202,7 +202,7 @@ main {
 .search_button_container {
     position: absolute;
     left: 50%;
-    top: 38vh;
+    top: 300px;
     transform: translate(-50%,-50%);
     z-index: 2;
 }
@@ -426,8 +426,6 @@ main {
     height: 40%;
 }
 
-
-
 .logo1_footer {
     width: 30.8%;
     min-width: 50px;
@@ -541,6 +539,7 @@ main {
     .filters-container {
       width: 100%;
       min-width: 200px;
+      padding-bottom: 10px;
     }
 
     .products-container {
