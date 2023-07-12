@@ -109,14 +109,14 @@ const filterSection = () => `
     <option class="date-options" value=2010>2010</option>
     <option class="date-options" value=2020>2020</option>
 </select><br>
-
+<!--
 <input type="checkbox" class="filter-check_toggle" id="genre1" name="Jazz" value="Jazz">
 <label class="filter3-input" for="genre1"> Jazz</label><br>
 <input type="checkbox" class="filter-check_toggle" id="genre2" name="Soul" value="Soul">
 <label class="filter3-input" for="genre2"> Soul</label><br>
 <input type="checkbox" class="filter-check_toggle" id="genre3" name="Rock" value="Rock">
 <label class="filter3-input" for="genre3"> Rock</label>
-
+-->
 <div class="filter-buttons-container">
 <input id="search-button" type="submit" value="Search">
 <input id="reset-button" type="reset" value="Reset">
@@ -187,27 +187,26 @@ const applyFilters = () => {
     filterArtistField = document.querySelector('#filter1-input').value;
     filterDateField = document.querySelector('#date-filter').value;
 
-    let filteredProducts = {...products};
-
-    if (filterArtistField !== null) {
-        //filter with artist
-        const normalizedValue = normalizeText(filterArtistField);
-        filteredProducts = products.filter(product => {
-            const normalizedArtist = normalizeText(product.artist);
-            return normalizedArtist.includes(normalizedValue);
+    if (filterArtistField !== null && filterDateField !== '') {
+        productsToShow = products.filter(obj => {
+            const normalizedArtist = normalizeText(obj.artist);
+            const decadeDateNormalized = decadeDate(obj.date);
+            return normalizedArtist.includes(normalizeText(filterArtistField)) && decadeDateNormalized == Number(filterDateField);
         });
-    };
-    if (filterDateField !== null) {
-        //filter with date
-        filteredProducts.filter(product => {
-            const decadeDateNormalized = decadeDate(product.date);
-            console.log(decadeDateNormalized);
-            return Number(filterDateField) == decadeDateNormalized;
+    } else if (filterArtistField !== null) {
+        productsToShow = products.filter(obj => {
+            const normalizedArtist = normalizeText(obj.artist);
+            return normalizedArtist.includes(normalizeText(filterArtistField))
         });
-    };
-    console.log(filteredProducts);
-    //Erase original product list and paste filtered product array
-    addProducts(filteredProducts);
+    } else if (filterDateField !== '') {
+        productsToShow = products.filter(obj => {
+            const decadeDateNormalized = decadeDate(obj.date);
+            return decadeDateNormalized == Number(filterDateField);
+        });
+    } else {
+        productsToShow = {...products};
+    }
+    addProducts(productsToShow);
    };
 
 //Reset filters and add initial product display
